@@ -1,0 +1,44 @@
+.central {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	height: 100px;
+	font-size: 20px;
+
+	border-radius: 50px;
+}
+
+.main-head {
+	background: #E0FFFF;
+	color: #4682B4;
+	font-weight: bolder;
+}
+
+.decr {
+	background: #4682B4;
+	color: #E0FFFF;
+	font-weight: bold;
+	text-align: center;
+}
+
+#changeBlock {
+	background: #E0FFFF;
+	color: #4682B4;
+	font-size: 26px;
+}
+
+/*
+.testChanges {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #999;
+	text-align: center;
+}
+
+button {
+	border-radius: 20px;
+}
+*/
