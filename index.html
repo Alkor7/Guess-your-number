@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Скрипт угадывает загаданное Вами число от 1 до 100">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" 
+    content="Скрипт угадывает загаданное Вами число от 1 до 100">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Угадайка</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Угадайка</title>
+  </head>
 
-<body>
+  <body>
 
-  <header class="main-head central"> Загадайте число от 1 до 100 </header>
-  <main class="decr central"> 
-    <p>Если Ваше число больше предложенного, нажмите кнопку ВВЕРХ <br>
-      если Ваше число меньше предложенного, нажмите ВНИЗ <br>
-    Если я угадал Ваше число - нажмите Enter </p>
-  </main>
-  <div id="changeBlock" class="central Changes"> Начальный текст </div>
-  <button name="ButtonStartJS" class="central" onclick="ugadator()" style="width: 90px; height:50px;">
+    <header id="changeBlock" class="main-head central"> 
+    Загадайте число от 1 до 100 </header>
+    <main class="descr central"> 
+      <p>
+        Если Ваше число больше предложенного, нажмите кнопку ВВЕРХ &uarr; <br>
+        Eсли Ваше число меньше предложенного, нажмите ВНИЗ  &darr; <br>
+      Если я угадал Ваше число - нажмите Enter &crarr; </p>
+    </main>
+    <button id="ButtonStartJS" name="ButtonStartJS" class="button central" 
+    onclick="ugadator()">
     Поехали!
+  </button>
+
+  <button id="newTry" class="button central" onclick="location.reload();">
+    Еще разок?
   </button>
   <br>
 
