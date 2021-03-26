@@ -6,13 +6,8 @@ var rndNum = function (min, max) {
 
 function ugadator () {
 
-	console.info("Начинаем!");
-
-// прячем кнопку Старт
 	btnState = document.getElementById("ButtonStartJS");
 	btnState.style.display = "none";
-
-
 
 	MyNum = rndNum(iMin, iMax);
 
@@ -22,53 +17,31 @@ function ugadator () {
 
 	document.addEventListener('keyup', function(event) {
 
-		if (event.key == "ArrowUp") {
-			iMin = MyNum+1;
-			MyNum = rndNum(iMin, iMax);
-			console.log("Нажал Вверх. iMin=" + iMin + " iMax =" + iMax + " MyNum =" + MyNum);
-			newText = document.getElementById("changeBlock")
-			newText.textContent=MyNum;
-		}
-		if (event.key == "ArrowDown") {
-			iMax = MyNum-1;
-			MyNum = rndNum(iMin, iMax);
-			console.info("Нажали Вниз. iMin=" + iMin + " iMax =" + iMax + " MyNum =" + MyNum);
-			newText = document.getElementById("changeBlock")
-			newText.textContent=MyNum;
-		}
-		if (event.key == "Enter") {
-			console.info("УГАДАЛ число = " + MyNum);
-			newText = document.getElementById("changeBlock")
-			newText.textContent=("Ваше число = " + MyNum);
-			newText = document.getElementById("newTry");
-			newText.style.display = "block"
-		}
+		if (event.key == "ArrowUp") {KeyArrowUp ();}
+		if (event.key == "ArrowDown") {KeyArrowDown ();}
+			if (event.key == "Enter") {KeyArrowOK ();}
 	});
 }
-
 
 function KeyArrowUp () {
 	iMin = MyNum+1;
 	MyNum = rndNum(iMin, iMax);
-	console.log("Нажал Вверх. iMin=" + iMin + " iMax =" + iMax + " MyNum =" + MyNum);
-	newText = document.getElementById("changeBlock")
+	newText = document.getElementById("changeBlock");
 	newText.textContent=MyNum;
 }
 
 function KeyArrowDown () {
 	iMax = MyNum-1;
 	MyNum = rndNum(iMin, iMax);
-	console.info("Нажали Вниз. iMin=" + iMin + " iMax =" + iMax + " MyNum =" + MyNum);
-	newText = document.getElementById("changeBlock")
+	newText = document.getElementById("changeBlock");
 	newText.textContent=MyNum;
 }
 
 function KeyArrowOK () {
-	console.info("УГАДАЛ число = " + MyNum);
-	newText = document.getElementById("changeBlock")
+	newText = document.getElementById("changeBlock");
 	newText.textContent=("Ваше число = " + MyNum);
 	newText = document.getElementById("newTry");
-	newText.style.display = "block"
+	newText.style.display = "block";
 	btnState = document.getElementById("block-of-keys");
 	btnState.style.display = "none";
 }
