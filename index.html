@@ -13,32 +13,28 @@
 
   <body>
 
-    <header id="changeBlock" class="main-head central"> 
-    Загадайте число <br> от 1 до 100 </header>
-    <main class="descr central"> 
-      <p>
-        Если Ваше число больше предложенного, нажмите кнопку ВВЕРХ &uarr; <br>
-        Eсли Ваше число меньше предложенного, нажмите ВНИЗ  &darr; <br>
-      Если я угадал Ваше число - нажмите Enter &crarr; </p>
-    </main>
-    <button id="ButtonStartJS" name="ButtonStartJS" class="button central" 
-    onclick="ugadator()">
-    Поехали!
-  </button>
+    <header id="changeBlock" class="main-head central" title="от 1 до 100 (включительно)"> 
+      Загадайте число <br> от 1 до 100 </header>
+      <main class="descr central"> 
+        <p>
+          Если Ваше число больше предложенного, нажмите кнопку ВВЕРХ &uarr; <br>
+          Eсли Ваше число меньше предложенного, нажмите ВНИЗ  &darr; <br>
+        Если я угадал Ваше число - нажмите Enter &crarr; </p>
+      </main>
+      <div id="block-of-keys">
+        <img src="arrow_up_circle.png" id="arrow_up" class="arrow-keys" title="Вверх" onclick="KeyArrowUp()">
+        <img src="ok_accept_bw.png" id="ok_accept" class="arrow-keys" title="Угадал" onclick="KeyArrowOK()">
+        <img src="arrow_bottom_circle.png" id="arrow_bottom" class="arrow-keys" title="Вниз" onclick="KeyArrowDown()">
+      </div>
 
-<div id="block-of-keys">
-<img src="arrow_up_circle.png" id="arrow_up" class="arrow-keys" onclick="KeyArrowUp()">
-<img src="ok_accept_bw.png" id="ok_accept" class="arrow-keys" onclick="KeyArrowOK()">
-<img src="arrow_bottom_circle.png" id="arrow_bottom" class="arrow-keys" onclick="KeyArrowDown()">
+      <button id="ButtonStartJS" name="ButtonStartJS" class="button central" title="Начнем" onclick="ugadator();">
+        Поехали!
+      </button>
 
-</div>
+      <button id="newTry" class="button central" title="Повторить" onclick="location.reload();">
+        Еще раз
+      </button>
 
-  <button id="newTry" class="button central" onclick="location.reload();">
-    Еще разок?
-  </button>
-  <br>
-
-  <script src="scrypt-guess-your-number.js"></script>
-
-</body>
-</html>
+      <script src="scrypt-guess-your-number.js"></script>
+    </body>
+    </html>
