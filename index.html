@@ -1,40 +1,51 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" 
-    content="Скрипт угадывает загаданное Вами число от 1 до 100">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" 
+	content="Скрипт угадывает загаданное Вами число от 1 до 100">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 800px)" href="small.css">
-    <title>Угадайка</title>
-  </head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" media="screen and (max-width: 800px)" href="small.css">
+	<title>Угадайка</title>
+</head>
 
-  <body>
+<body>
 
-    <header id="changeBlock" class="main-head central" title="от 1 до 100 (включительно)"> 
-      Загадайте число <br> от 1 до 100 </header>
-      <main class="descr central"> 
-        <p>
-          Если Ваше число больше предложенного, нажмите кнопку ВВЕРХ &uarr; <br>
-          Eсли Ваше число меньше предложенного, нажмите ВНИЗ  &darr; <br>
-        Если я угадал Ваше число - нажмите Enter &crarr; </p>
-      </main>
-      <div id="block-of-keys">
-        <img src="arrow_up_circle.png" id="arrow_up" class="arrow-keys" title="Вверх" onclick="KeyArrowUp()">
-        <img src="ok_accept_bw.png" id="ok_accept" class="arrow-keys" title="Угадал" onclick="KeyArrowOK()">
-        <img src="arrow_bottom_circle.png" id="arrow_bottom" class="arrow-keys" title="Вниз" onclick="KeyArrowDown()">
-      </div>
+	<header id="changeBlock" class="main-head central" title="от 1 до 100 (включительно)"> 
+		Загадайте число <br> от 1 до 100 
+	</header>
 
-      <button id="ButtonStartJS" name="ButtonStartJS" class="button central" title="Начнем" onclick="ugadator();">
-        Поехали!
-      </button>
+	<main class="descr central"> 
+		<p>
+			Если Ваше число больше предложенного, нажмите кнопку ВВЕРХ &uarr; <br>
+			Eсли Ваше число меньше предложенного, нажмите ВНИЗ  &darr; <br>
+			Если я угадал Ваше число - нажмите Enter &crarr; </p>
+	</main>
 
-      <button id="newTry" class="button central" title="Повторить" onclick="location.reload();">
-        Еще раз
-      </button>
+	<div id="block-of-keys">
+		<img src="arrow_up_circle.png" id="arrow_up" class="arrow-keys" title="Вверх" onclick="KeyArrowUp()">
+		<img src="ok_accept_bw.png" id="ok_accept" class="arrow-keys" title="Угадал" onclick="KeyArrowOK()">
+		<img src="arrow_bottom_circle.png" id="arrow_bottom" class="arrow-keys" title="Вниз" onclick="KeyArrowDown()">
+	</div>
 
-      <script src="scrypt-guess-your-number.js"></script>
-    </body>
-    </html>
+	<form id="forma">
+		<p><input name="radioBTN" type="radio" id="radRnd" value="guessRandom" checked>
+		<label for="radRnd">Случайное число</label></p>
+		<p><input name="radioBTN" type="radio" id="radDiv" value="guessDivide">
+		<label for="radDiv">Точное деление</label></p>
+	</form>
+
+	<button id="ButtonStartJS" name="ButtonStartJS" class="button central" title="Начнем" onclick="ugadator();">
+		Поехали!
+	</button>
+
+	<button id="newTry" class="button central" title="Повторить" onclick="location.reload();">
+		Еще раз
+	</button>
+
+
+	<script src="scrypt-guess-your-number.js"></script>
+</body>
+</html>

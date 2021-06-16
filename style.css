@@ -50,3 +50,9 @@ body {
 .arrow-keys {
 	height: 100px;
 }
+
+#forma {
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+}
